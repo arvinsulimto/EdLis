@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/header_login_register"
+        android:id="@+id/img_header_login_register"/>
+
+
+    <ImageView
+        android:id="@+id/img_header_free"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/img_header_login_register"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/header_free" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="43dp"
+        android:text="Register"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="43dp"
+        android:text="Login"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvRegister"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="46dp"
+        android:text="Forgot Password"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/tvForgotPassword2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="46dp"
+        android:text="Change Password"
+        android:textStyle="bold" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+        android:id="@+id/fl_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="30dp"
+        android:orientation="vertical">
+
+        <EditText
+        android:id="@+id/etNameRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="11dp"
+        android:hint="Full Name"
+        android:layout_marginBottom="10dp"/>
+
+        <EditText
+        android:id="@+id/etEmailRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Email"
+        android:layout_marginBottom="10dp"/>
+
+        <EditText
+        android:id="@+id/etNumberRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Phone Number"
+        android:layout_marginBottom="10dp"/>
+
+        <EditText
+        android:id="@+id/etHintRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Hint"
+        android:layout_marginBottom="10dp"/>
+
+        <EditText
+        android:id="@+id/etPasswordRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Password"
+        android:layout_marginBottom="10dp"
+        android:inputType="textPassword"/>
+
+
+        <EditText
+        android:id="@+id/etConfirmPasswordRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"/>
+
+
+        <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorOrange"
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:textColorLink="@color/colorWhite" />
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account ?"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="30dp"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Here."
+        android:textColor="@color/colorLightBlue"
+        android:id="@+id/tvClickHere"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-18dp"
+        android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+        </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fl_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="208dp"
+                    android:layout_marginBottom="118dp"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/colorLightBlue" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="14dp"
+                    android:hint="Email" />
+
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="76dp"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="166dp"
+                    android:background="@color/colorOrange"
+                    android:bottomLeftRadius="10dp"
+                    android:bottomRightRadius="10dp"
+                    android:text="Login"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@color/colorWhite" />
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fl_forgotPassword"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etHintForgotPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="22dp"
+                    android:hint="Hint" />
+
+                <EditText
+                    android:id="@+id/etEmailForgotPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/etHintForgotPassword"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="85dp"
+                    android:hint="Email" />
+
+                <Button
+                    android:id="@+id/btnForgotPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="166dp"
+                    android:background="@color/colorOrange"
+                    android:bottomLeftRadius="10dp"
+                    android:bottomRightRadius="10dp"
+                    android:text="Forgot Password"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@color/colorWhite" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fl_changePassword"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <EditText
+                    android:id="@+id/etPasswordNew"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:hint="New Password"
+                    android:inputType="textPassword"/>
+
+                <EditText
+                    android:id="@+id/etConfirmPasswordNew"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="53dp"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"/>
+
+                <Button
+                    android:id="@+id/btnNewPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="144dp"
+                    android:background="@color/colorOrange"
+                    android:bottomLeftRadius="10dp"
+                    android:bottomRightRadius="10dp"
+                    android:text="Change Password"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@color/colorWhite" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

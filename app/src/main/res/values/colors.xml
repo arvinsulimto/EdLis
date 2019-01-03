@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorLightBlue">#00cccb</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#151515</color>
+    <color name="colorAbuAbu">#595959</color>
+    <color name="colorOrange">#f89b2c</color>
+    <color name="colorDisableOrange">#f7b668</color>
+
+
+    <color name="toolBarColor">#00cccc</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="belowtitle">#339a98</color>
+    <color name="SMBackground">#f2f2f2</color>
+    <color name="black">#000000</color>
+    <color name="shadowgrey">#b8b8b8</color>
+
+    <color name="colorAbuTerang">#c6c5c5</color>
+</resources>

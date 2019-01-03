@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectMaterial"
+    android:background="@color/SMBackground">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/belowtitle" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/round_rect_shape">
+
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ems="8"
+                    android:textSize="30sp"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/imgbtn_reading"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="350dp"
+                android:layout_height="110dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="188dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/reading" />
+
+            <FrameLayout
+                android:id="@+id/frame_layout1"
+                android:layout_width="350dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/imgbtn_reading"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="1dp"></FrameLayout>
+
+            <ImageButton
+                android:id="@+id/imgbtn_writing"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="350dp"
+                android:layout_height="110dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="309dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/writing" />
+
+            <FrameLayout
+                android:id="@+id/frame_layout2"
+                android:layout_width="350dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/imgbtn_writing"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="1dp"></FrameLayout>
+
+            <ImageButton
+                android:id="@+id/imgbtn_listening"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="350dp"
+                android:layout_height="110dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="430dp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/listening" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_layout3"
+                android:layout_width="350dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="19dp"
+                android:layout_below="@+id/imgbtn_listening"
+                android:layout_marginLeft="31dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
