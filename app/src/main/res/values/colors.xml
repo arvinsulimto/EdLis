@@ -17,6 +17,23 @@
     <color name="SMBackground">#f2f2f2</color>
     <color name="black">#000000</color>
     <color name="shadowgrey">#b8b8b8</color>
+    <color name="reading_color">#4b4a96</color>
+    <color name="writing_color">#b2948c</color>
+    <color name="listening_color">#247d9d</color>
 
     <color name="colorAbuTerang">#c6c5c5</color>
+    <color name="bingung_background">#d1fafafa</color>
+
+    <color name="oval_shape_color">#fe9931</color>
+    <color name="button_color">#d5d5d9</color>
+
+    <color name="selectedTab">#08c5ba</color>
+    <color name="tabBackground">#f2f2f2</color>
+    <color name="tabText">#000000</color>
+
+    <color name="green">#00fe31</color>
+    <color name="red">#ff0000</color>
+    <color name="orange">#E3C046</color>
+
+    <color name="splashscreencolor">#44d9e6</color>
 </resources>

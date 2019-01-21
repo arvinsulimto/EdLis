@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.telecom.Call;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class CallUs extends AppCompatActivity {
 
+    ImageButton callus_backBtn;
     String Email;
     String Username;
     @Override
@@ -17,24 +19,25 @@ public class CallUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_us);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbarcallus);
         setSupportActionBar(toolbar);
-        toolbar.setTitleTextColor(Color.WHITE);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Call Us");
 
-        Email = getIntent().getStringExtra("dataEmail");
-        Username = getIntent().getStringExtra("dataUsername");
+        Singelton Passing = Singelton.getInstance();
+        Username = Passing.getPassingUsername();
+        Email =  Passing.getPassingEmail();
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//        Email = getIntent().getStringExtra("dataEmail");
+//        Username = getIntent().getStringExtra("dataUsername");
+
+        callus_backBtn = findViewById(R.id.callus_Backbtn);
+        callus_backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CallUs.this,MainActivity.class);
-                intent.putExtra("dataUsername",Username);
-                intent.putExtra("dataEmail",Email);
+                Intent intent = new Intent(CallUs.this, MainActivity.class);
+//                intent.putExtra("dataUsername",Username);
+//                intent.putExtra("dataEmail",Email);
                 startActivity(intent);
                 finish();
-
             }
         });
     }

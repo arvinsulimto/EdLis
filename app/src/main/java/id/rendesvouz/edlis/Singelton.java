@@ -1,9 +1,19 @@
 package id.rendesvouz.edlis;
 
+import android.content.Context;
+
+import java.util.ArrayList;
+
+import id.rendesvouz.edlis.Hawari.Question;
+
 public class Singelton {
     private static Singelton instance;
-    private String PassingUsername;
-    private String PassingEmail;
+    private String PassingUsername="";
+    private String PassingEmail="";
+
+    private String questions[];
+    private int answer[];
+    private int currentAnswer[];
 
 
     private Singelton(){
@@ -33,5 +43,6 @@ public class Singelton {
     public void setPassingEmail(String passingEmail) {
         PassingEmail = passingEmail;
     }
+
 }
 

@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import id.rendesvouz.edlis.Victor.SelectMaterial;
+
 public class FragmentHome extends Fragment {
     View view;
     String Username;
@@ -32,13 +34,13 @@ public class FragmentHome extends Fragment {
                 Username = Passing.getPassingUsername();
                 Email =  Passing.getPassingEmail();
 
-                if(Username==null){
+                if(Username.equals("")){
                     Toast.makeText(getActivity().getApplicationContext(), "You Need To Login First", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Intent intent = new Intent(getActivity(), SelectMaterial.class);
-                    intent.putExtra("dataUsername",Username);
-                    intent.putExtra("dataEmail",Email);
+//                    intent.putExtra("dataUsername",Username);
+//                    intent.putExtra("dataEmail",Email);
                     startActivity(intent);
                     getActivity().finish();
                 }

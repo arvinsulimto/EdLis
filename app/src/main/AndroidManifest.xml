@@ -2,29 +2,50 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.rendesvouz.edlis">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/splashscreen"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Victor.SelectMaterial" />
+        <activity android:name=".Victor.Fragment.Reading" />
+        <activity android:name=".Victor.Fragment.Writing" />
+        <activity android:name=".Setting" />
+        <activity android:name=".CallUs" />
+        <activity android:name=".Victor.Topic.Reading.ReadPage" />
+        <activity android:name=".Victor.Topic.Reading.ReadingTopic" />
+        <activity android:name=".Victor.Topic.Listening.ListeningTopic" />
+        <activity android:name=".Victor.Topic.Writing.WritingTopic" />
+        <activity android:name=".Victor.Exam.ExamMenuReading" />
+        <activity android:name=".Victor.Exam.ExamMenuWriting" />
+        <activity android:name=".Victor.Exam.ExamMenuListening" />
+        <activity android:name=".Hawari.Writing.WritingEasy_Exam" />
+        <activity android:name=".Hawari.Writing.WritingMedium_Exam" />
+        <activity android:name=".Hawari.Writing.WritingHard_Exam" />
+        <activity android:name=".Hawari.Reading.ReadingEasy_Exam" />
+        <activity android:name=".Hawari.Reading.ReadingMedium_Exam" />
+        <activity android:name=".Hawari.Reading.ReadingHard_Exam" />
+        <activity android:name=".Hawari.Listening.ListeningEasy_Exam" />
+        <activity android:name=".Hawari.Listening.ListeningMedium_Exam" />
+        <activity android:name=".Hawari.Listening.ListeningHard_Exam" />
+        <activity android:name=".Hawari.WritingExamResult" />
+        <activity android:name=".Hawari.ReadingExamResult" />
+        <activity android:name=".Hawari.ListeningExamResult" />
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SelectMaterial"/>
-        <activity android:name=".ReadingFragment" />
-        <activity android:name=".Writing" />
-        <activity
-            android:name=".Setting" />
-        <activity
-            android:name=".CallUs" />
-
     </application>
 
 </manifest>

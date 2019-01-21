@@ -54,9 +54,9 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/tvRegister"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="46dp"
-        android:text="Forgot Password"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="47dp"
+        android:text="Back to Login"
         android:textStyle="bold" />
 
     <TextView
@@ -66,9 +66,9 @@
 
         android:layout_alignTop="@+id/tvForgotPassword2"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="126dp"
+        android:layout_marginStart="105dp"
         android:layout_marginTop="46dp"
-        android:text="Change Password"
+        android:text="Back to Forgot Password"
         android:textStyle="bold" />
     <FrameLayout
         android:layout_width="match_parent"
@@ -180,8 +180,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-
                 <TextView
                     android:id="@+id/tvForgotPassword"
                     android:layout_width="wrap_content"

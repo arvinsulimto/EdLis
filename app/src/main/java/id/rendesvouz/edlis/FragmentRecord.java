@@ -2,6 +2,7 @@ package id.rendesvouz.edlis;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -65,8 +66,8 @@ public class FragmentRecord extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(),MainActivity.class);
-                    intent.putExtra("dataUsername", Username);
-                    intent.putExtra("dataEmail",Email);
+//                    intent.putExtra("dataUsername", Username);
+//                    intent.putExtra("dataEmail",Email);
                     startActivity(intent);
                     getActivity().finish();
                 }
@@ -80,6 +81,8 @@ public class FragmentRecord extends Fragment {
                 result.setLevel(cursor.getString(2));
                 result.setType(cursor.getString(3));
                 result.setScore(cursor.getString(4));
+                result.setDate(cursor.getString(5));
+                result.setTime(cursor.getString(6));
                 listResult.add(result);
             }
             resultAdapter.notifyDataSetChanged();

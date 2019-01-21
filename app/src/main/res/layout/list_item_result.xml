@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAbuTerang"
-        android:padding="40dp">
+        android:padding="60dp">
 
 
 
@@ -79,5 +79,19 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/textView10"
         android:text="Score" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView11"
+        android:layout_marginStart="17dp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginStart="17dp"/>
 
 </RelativeLayout>

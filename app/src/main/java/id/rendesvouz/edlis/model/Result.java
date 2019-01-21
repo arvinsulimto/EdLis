@@ -5,7 +5,29 @@ public class Result {
     private String Type;
     private String Level;
     private String Score;
+    private String Date;
+    private String Time;
 
+    public String getTime() {
+        return Time;
+    }
+
+    public void setTime(String time) {
+        Time = time;
+    }
+
+
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
+    }
+
+    public Result() {
+    }
 
 
     public String getType() {
@@ -55,5 +77,7 @@ public class Result {
     public void setScore(String score) {
         Score = score;
     }
+
+
 
 }

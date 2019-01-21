@@ -19,7 +19,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
     Context context;
     ArrayList<Result> listResult;
 
-    public ResultAdapter(Context context,ArrayList<Result> listResult){
+    public ResultAdapter(Context context, ArrayList<Result> listResult){
         this.context = context;
         this.listResult = listResult;
     }
@@ -45,17 +45,21 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         this.listResult=listPeople;
     }
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvType,tvScore,tvLevel;
+        TextView tvType,tvScore,tvLevel, tvTime, tvDate;
         public ViewHolder(View itemView){
             super(itemView);
             tvType = itemView.findViewById(R.id.tv_Type);
             tvScore = itemView.findViewById(R.id.tv_Score);
             tvLevel = itemView.findViewById(R.id.tv_Level);
+            tvDate = itemView.findViewById(R.id.tv_date);
+            tvTime = itemView.findViewById(R.id.tv_time);
         }
         public void bind(Result result){
             tvType.setText(result.getType());
             tvScore.setText(result.getScore());
             tvLevel.setText(result.getLevel());
+            tvDate.setText(result.getDate());
+            tvTime.setText(result.getTime());
         }
     }
 }

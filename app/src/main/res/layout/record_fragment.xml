@@ -27,7 +27,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="22dp"
-                android:src="@drawable/bingung" />
+                android:src="@drawable/bingung"
+                android:background="@color/bingung_background"
+                />
             <Button
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"

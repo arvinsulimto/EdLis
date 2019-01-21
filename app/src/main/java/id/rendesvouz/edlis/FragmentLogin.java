@@ -1,10 +1,12 @@
 package id.rendesvouz.edlis;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +20,10 @@ import android.widget.Toast;
 
 public class FragmentLogin extends Fragment {
 
-
     View view;
-    String Username;
-    String Email;
+    String Username="";
+    String Email="";
+    String EmailTempForChangePassword="";
     public FragmentLogin() {
 
     }
@@ -59,12 +61,14 @@ public class FragmentLogin extends Fragment {
             public void onClick(View v) {
                 String NewPassword = etNewPassword.getText().toString();
                 String ConfirmNewPassword = etConfirmPasswordNew.getText().toString();
-                String EmailTemp = etEmailForgotPassword.getText().toString();
+                String EmailTemp = EmailTempForChangePassword;
 
-                if(NewPassword.equals(ConfirmNewPassword)){
+                if(NewPassword.equals(ConfirmNewPassword) && NewPassword.length() != 0){
                     DatabaseAccess databaseAccess = DatabaseAccess.getInstance(getActivity().getApplicationContext());
                     databaseAccess.open();
                     Boolean ChangePassword = databaseAccess.UpdateUser(EmailTemp,NewPassword);
+                    etNewPassword.setText("");
+                    etConfirmPasswordNew.setText("");
                     if(ChangePassword==true){
                         Toast.makeText(getActivity().getApplicationContext(), "Successfully Update", Toast.LENGTH_SHORT).show();
                     }
@@ -72,9 +76,13 @@ public class FragmentLogin extends Fragment {
                         Toast.makeText(getActivity().getApplicationContext(), "Failed To Update", Toast.LENGTH_SHORT).show();
                     }
                     databaseAccess.close();
-
+                }
+                else if(NewPassword.length() == 0){
+                    Toast.makeText(getActivity().getApplicationContext(), "New Password cannot be empty", Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    etNewPassword.setText("");
+                    etConfirmPasswordNew.setText("");
                     Toast.makeText(getActivity().getApplicationContext(), "New Password doesnt match with confirm password", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -94,6 +102,7 @@ public class FragmentLogin extends Fragment {
                 tvForgotPassword2.setVisibility(View.VISIBLE);
                 tvChangePassword.setVisibility(View.GONE);
                 fl_changePassword.setVisibility(View.GONE);
+                btnForgotPassword.setVisibility(View.VISIBLE);
             }
         });
 
@@ -107,10 +116,14 @@ public class FragmentLogin extends Fragment {
                 Boolean CheckHint = databaseAccess.CheckHint(EmailForgotPassword,HintForgotPassword);
 
                 if(CheckHint==true){
+                    EmailTempForChangePassword = etEmailForgotPassword.getText().toString();
                    fl_forgotPassword.setVisibility(View.GONE);
                    tvForgotPassword2.setVisibility(View.GONE);
                    tvChangePassword.setVisibility(View.VISIBLE);
                    fl_changePassword.setVisibility(View.VISIBLE);
+                   btnForgotPassword.setVisibility(View.GONE);
+                   etHintForgotPassword.setText("");
+                   etEmailForgotPassword.setText("");
                 }
                 else{
                     Toast.makeText(getActivity().getApplicationContext(), "Hint or Email Wrong", Toast.LENGTH_SHORT).show();
@@ -244,11 +257,11 @@ public class FragmentLogin extends Fragment {
         etPassword = (EditText) view.findViewById(R.id.etPassword);
         btnLogin = (Button) view.findViewById(R.id.btnLogin);
 
-        Singelton Passing = Singelton.getInstance();
+        final Singelton Passing = Singelton.getInstance();
         Username = Passing.getPassingUsername();
         Email = Passing.getPassingEmail();
 
-        if(Username== null){
+        if(Username.equals("")){
             btnLogin.setEnabled(true);
         }
         else{
@@ -266,6 +279,7 @@ public class FragmentLogin extends Fragment {
                 databaseAccess.open();
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
+
                 Boolean LoginValidation = databaseAccess.LoginValidation(email,password);
 
                 if(LoginValidation==false){
@@ -274,9 +288,19 @@ public class FragmentLogin extends Fragment {
                 else{
                     String username = databaseAccess.getUsername(email,password);
                     String email1 = databaseAccess.getEmail(email,password);
+                    databaseAccess.InsertLogin(username, email);
+
+                    String UsernameSession =databaseAccess.getUsernameSession();
+                    String EmailSession = databaseAccess.getEmailSession();
+
                     Intent intent = new Intent(getActivity(),MainActivity.class);
-                    intent.putExtra("dataUsername", username);
-                    intent.putExtra("dataEmail",email1);
+                    // change concept passing user
+//                    intent.putExtra("dataUsername", username);
+//                    intent.putExtra("dataEmail",email1);
+                    // change to
+                    Passing.setPassingUsername(UsernameSession);
+                    Passing.setPassingEmail(EmailSession);
+
                     startActivity(intent);
                     getActivity().finish();
                 }
@@ -295,7 +319,6 @@ public class FragmentLogin extends Fragment {
 
             }
         });
-
 
         return view;
     }
