@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="384dp" android:layout_height="50dp"
+    android:id="@+id/writingExam_toolbar"
+    android:layout_weight="1"
+    android:background="@color/writing_color"
+    >
+
+    <ImageButton
+        android:id="@+id/btn_backArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_button"
+        android:background="@color/writing_color"/>
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Analysis of Exam Results"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/oval_shape_exam">
+        <ImageButton
+            android:id="@+id/btn_endExam"
+            android:layout_width="80dp"
+            android:layout_height="35dp"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Exam"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+
+
+
+</android.support.v7.widget.Toolbar>

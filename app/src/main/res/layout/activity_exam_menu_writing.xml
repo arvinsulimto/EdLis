@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/SMBackground"
+    tools:context=".Victor.Exam.ExamMenuWriting">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/exam_writing_toolbar" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="95dp"
+        android:src="@drawable/mudah" />
+
+    <ImageView
+        android:layout_width="257dp"
+        android:layout_height="114dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/exam_round_rectangle"
+        />
+
+    <TextView
+        android:id="@+id/examTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="102dp"
+        android:text="Writing"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examTitle"
+        android:layout_alignStart="@+id/examTitle"
+        android:layout_marginTop="3dp"
+        android:text="Soal : 10"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tvSkor_writing_mudah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examTitle"
+        android:layout_alignStart="@+id/examTitle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="39dp"
+        android:textColor="@color/black"
+        android:text="Score : 0"
+        android:textSize="17dp" />
+
+    <ImageButton
+        android:id="@+id/startMudah"
+        android:layout_width="87dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/examTitle"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="37dp"
+        android:layout_toEndOf="@+id/examTitle"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        android:src="@drawable/oval_shape" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/examTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="45dp"
+        android:text="START"
+        android:textColor="@color/black" />
+
+
+    <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@/-->
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="245dp"
+        android:src="@drawable/sedang" />
+
+    <ImageView
+        android:layout_width="257dp"
+        android:layout_height="114dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="237dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/exam_round_rectangle" />
+
+    <TextView
+        android:id="@+id/examTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="252dp"
+        android:text="Writing"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examTitle1"
+        android:layout_alignStart="@+id/examTitle"
+        android:layout_marginTop="3dp"
+        android:text="Soal : 10"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tvSkor_writing_sedang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examTitle1"
+        android:layout_alignStart="@+id/examTitle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="39dp"
+        android:textColor="@color/black"
+        android:text="Score : 0"
+        android:textSize="17dp" />
+
+    <ImageButton
+        android:id="@+id/startSedang"
+        android:layout_width="87dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/examTitle1"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="37dp"
+        android:layout_toEndOf="@+id/examTitle1"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        android:src="@drawable/oval_shape" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/examTitle1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="45dp"
+        android:text="START"
+        android:textColor="@color/black" />
+
+    <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@/-->
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="395dp"
+        android:src="@drawable/sulit" />
+
+    <ImageView
+        android:layout_width="257dp"
+        android:layout_height="114dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="387dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/exam_round_rectangle" />
+
+    <TextView
+        android:id="@+id/examTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="402dp"
+        android:text="Writing"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examTitle2"
+        android:layout_alignStart="@+id/examTitle"
+        android:layout_marginTop="3dp"
+        android:text="Soal : 10"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tvSkor_writing_sulit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examTitle2"
+        android:layout_alignStart="@+id/examTitle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="39dp"
+        android:textColor="@color/black"
+        android:text="Score : 0"
+        android:textSize="17dp" />
+
+    <ImageButton
+        android:id="@+id/startSulit"
+        android:layout_width="87dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/examTitle2"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="37dp"
+        android:layout_toEndOf="@+id/examTitle2"
+        android:background="@color/colorWhite"
+        android:scaleType="fitCenter"
+        android:src="@drawable/oval_shape" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/examTitle2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="45dp"
+        android:text="START"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

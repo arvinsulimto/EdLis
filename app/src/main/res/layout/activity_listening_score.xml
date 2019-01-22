@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/SMBackground">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/exam_score_l_toolbar" />
+
+    <ImageView
+        android:layout_width="303dp"
+        android:layout_height="447dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/score_rect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:text="Listening Topic Exam"
+        android:textSize="12dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:text="16-01/2019"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/txt_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_date"
+        android:layout_centerHorizontal="true"
+        android:text="10:37"
+        android:textSize="11dp" />
+
+    <ImageView
+        android:layout_width="146dp"
+        android:layout_height="146dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="-87dp"
+        android:layout_toStartOf="@+id/txt_clock"
+        android:src="@drawable/circle_score" />
+
+    <ImageView
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="-77dp"
+        android:layout_toStartOf="@+id/txt_clock"
+        android:src="@drawable/circle_score" />
+
+    <TextView
+        android:id="@+id/txt_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="205dp"
+        android:text="70"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/circle_true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="310dp"
+        android:src="@drawable/circle_true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/circle_true"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="0dp"
+        android:text="True"
+        android:textColor="@color/black"
+        android:textSize="9dp" />
+
+    <TextView
+        android:id="@+id/txt_true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/circle_true"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="7dp"
+        android:text="7"
+        android:textColor="@color/black"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:id="@+id/circle_false"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="200dp"
+        android:src="@drawable/circle_false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/circle_false"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="-1dp"
+        android:text="False"
+        android:textColor="@color/black"
+        android:textSize="9dp" />
+
+    <TextView
+        android:id="@+id/txt_false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/circle_false"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="7dp"
+        android:text="2"
+        android:textColor="@color/black"
+        android:textSize="10dp" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/circle_pass"-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginStart="225dp"-->
+        <!--android:layout_marginTop="310dp"-->
+        <!--android:src="@drawable/circle_pass" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/circle_pass"-->
+        <!--android:layout_marginTop="340dp"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="9dp"-->
+        <!--android:text="Pass" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/txt_pass"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/circle_pass"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:layout_marginTop="360dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:textSize="10dp"-->
+        <!--android:text="1" />-->
+
+    <TextView
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/txt_false"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:textSize="12dp"
+        android:id="@+id/txt_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 Menit 42 Detik"
+        android:textColor="@color/black"
+        android:layout_below="@+id/txt_false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_tryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/oval_shape_try_again" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_tryAgain"
+        android:layout_marginStart="110dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_replay_black_24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txt_score"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="-29dp"
+        android:text="Try Again"
+        android:textSize="17dp"
+        android:textColor="@color/orange" />
+
+</RelativeLayout>

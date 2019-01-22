@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Victor.Topic.Writing.WritingTopic"
+    android:background="@color/SMBackground">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/writing_toolbar"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="482dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/hiasantopic" />
+
+    <ImageView
+        android:layout_width="259dp"
+        android:layout_height="83dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="431dp"
+        android:src="@drawable/topic_rect_shape" />
+
+    <RelativeLayout
+        android:id="@+id/posisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="124dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Writing"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/positionSatu"
+            android:layout_width="101dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="-10dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/topic_pertama" />
+
+        <ImageButton
+            android:id="@+id/btn_down_arrow"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/positionSatu"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="-22dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/down_arrow" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="260dp"
+        android:layout_height="350dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/viewpager"
+        app:ci_drawable="@drawable/circleindicator_round"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="-66dp"
+        />
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/topic_layout"-->
+    <!--android:layout_width="260dp"-->
+    <!--android:layout_height="400dp"-->
+    <!--android:layout_below="@+id/posisi"-->
+    <!--android:layout_marginStart="70dp">-->
+
+    <!--</FrameLayout>-->
+
+</RelativeLayout>
